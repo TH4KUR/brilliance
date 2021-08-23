@@ -4,8 +4,8 @@ const dotenv = require("dotenv");
 const morgan = require("morgan");
 const cookieParser = require("cookie-parser");
 const fs = require("fs");
-const TIMEOUT_REPORT = 15;
-const TIMEOUT_OVERALL = 30;
+const nocache = require("nocache");
+
 // Middlewares
 
 let app = express();
@@ -13,7 +13,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan("dev"));
 app.use(cookieParser());
-
+app.disable("view cache");
+app.use(nocache());
 ////////////////////////////////////////////
 // Helper functions
 
@@ -234,7 +235,10 @@ const templateUser = async (temp, user, dashboard = false) => {
 app
   .route("/login")
   .get((req, res) => {
-    res.status(200).sendFile(`${__dirname}/login/index.html`);
+    res
+      .status(200)
+      .setHeader("Cache-Control", "no-cache, no-store, must-revalidate")
+      .sendFile(`${__dirname}/login/index.html`);
   })
   .post(async (req, res) => {
     try {
@@ -288,14 +292,15 @@ app
   .route("/dashboard")
   .get(async (req, res) => {
     try {
-      console.log(req.cookies.token);
       if (req.cookies.token && req.cookies.token.split(":").length === 2) {
         let ret_obj = await token_validate(req, res);
         let check = ret_obj.check;
         let user = ret_obj?.user;
         console.log(check);
         if (!check) {
-          res.writeHead(301, { Location: "/login" }).end();
+          res
+            .setHeader("Cache-Control", "no-cache, no-store, must-revalidate")
+            .redirect("/login");
           return;
         }
         let html = await templateUser(dashboard_temp.repeat(1), user, true);

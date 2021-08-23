@@ -136,8 +136,8 @@ const userSchema = new mongoose.Schema({
 });
 
 const User = mongoose.model("Users", userSchema);
-
-app.listen(80, () => {
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
   console.log("App running on port 80......");
 });
 
@@ -247,7 +247,6 @@ const templateUser = async (temp, user, dashboard = false) => {
 
     y.unshift(loginUser_temp);
     output = output.replace(/{FRIENDS_REP}/g, y.join(""));
-    // output = output.replace(/{overall_p}/g, "80");
     output = output.replace("{DISPLAY_REP}", "");
   }
   output = output.replace("{DISPLAY_REP}", "hidden");

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./fonts/icomoon/style.css" />
+
+    <link rel="stylesheet" href="./css/owl.carousel.min.css" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+
+    <!-- Style -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <title>Brilliance - your study mate</title>
+  </head>
+  <body>
+    <div class="content">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <img
+              src="./images/undraw_remotely_2j6y.svg"
+              alt="Image"
+              class="img-fluid"
+            />
+          </div>
+          <div class="col-md-6 contents">
+            <div class="row justify-content-center">
+              <div class="col-md-8">
+                <div class="mb-4">
+                  <h3 class="heading">Sign Up</h3>
+                  <p class="mb-4">
+                    Create a new account to access the Brilliance.
+                  </p>
+                </div>
+                <form action="#" method="post">
+                  <div class="form-group first">
+                    <label for="name">Full name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="name"
+                      required
+                    />
+                  </div>
+                  <div class="form-group first">
+                    <label for="username">Username</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      maxlength="10"
+                      id="username"
+                      required
+                    />
+                  </div>
+                  <div class="form-group first">
+                    <label for="email">Email address</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      required
+                    />
+                  </div>
+                  <div class="form-group last mb-4">
+                    <label for="password">Password</label>
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="password"
+                      required
+                    />
+                  </div>
+
+                  <div class="d-flex mb-5 align-items-center">
+                    <label class="control control--checkbox mb-0"
+                      ><span class="caption">Receive Email updates</span>
+                      <input type="checkbox" checked="checked" />
+                      <div class="control__indicator"></div>
+                    </label>
+                    <span class="ml-auto">&nbsp;</span>
+                  </div>
+
+                  <p class="success hidden">
+                    You are successfully registered, redirecting in 3
+                    secs.......
+                  </p>
+                  <p class="failed hidden">testing</p>
+                  <input
+                    type="submit"
+                    value="Sign Up"
+                    class="btn btn-block btn-primary"
+                    id="submit"
+                  />
+                  <span class="d-block text-left my-4 text-muted"
+                    >&mdash; or &mdash;</span
+                  >
+
+                  <div class="or">
+                    <a href="/login" class="sign-up">Sign In</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      let btn_submit = document.getElementById("submit");
+      let success_box = document.querySelector(".success");
+      let err_box = document.querySelector(".failed");
+      btn_submit.addEventListener("click", async (e) => {
+        try {
+          let email = document.getElementById("email").value;
+          let password = document.getElementById("password").value;
+          let username = document.getElementById("username").value;
+          let name = document.getElementById("name").value;
+          e.preventDefault();
+
+          if (!email || !password || !username || !name) return;
+
+          data = {
+            name: name,
+            username: username,
+            password: password,
+            email: email,
+          };
+
+          let res = await fetch("/signup", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+          });
+          console.log(res);
+          let json_res = await res.json();
+          console.log(json_res);
+          if (!res.ok) {
+            throw new Error(
+              json_res.message ||
+                "An error occurred, please check your given input and try again."
+            );
+          } else {
+            err_box.classList.add("hidden");
+            success_box.classList.remove("hidden");
+            setTimeout(() => (window.location = "/dashboard"), 1500);
+          }
+        } catch (err) {
+          err_box.textContent = err || err.message;
+          err_box.classList.remove("hidden");
+          // setTimeout(() => err_box.classList.add("hidden"), 5000);
+        }
+      });
+    </script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <!-- <script src="./js/bootstrap.min.js"></script> -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>

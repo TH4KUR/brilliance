@@ -1,0 +1,813 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>SB Admin 2 - Blank</title>
+
+    <!-- Custom fonts for this template-->
+    <link
+      href="vendor/fontawesome-free/css/all.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    />
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet" />
+  </head>
+
+  <body id="page-top" class="">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+      <!-- Sidebar -->
+      <ul
+        class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion"
+        id="accordionSidebar"
+      >
+        <!-- Sidebar - Brand -->
+        <a
+          class="sidebar-brand d-flex align-items-center justify-content-center"
+          href="/dashboard"
+        >
+          <div class="sidebar-brand-icon rotate-n-15">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              fill="#dedede"
+              viewBox="0 0 256 256"
+            >
+              <rect width="256" height="256" fill="none"></rect>
+              <polygon
+                points="72 40 184 40 240 104 128 224 16 104 72 40"
+                fill="none"
+                stroke="#dedede"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="16"
+              ></polygon>
+              <polygon
+                points="177.091 104 128 224 78.909 104 128 40 177.091 104"
+                fill="none"
+                stroke="#dedede"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="16"
+              ></polygon>
+              <line
+                x1="16"
+                y1="104"
+                x2="240"
+                y2="104"
+                fill="none"
+                stroke="#dedede"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="16"
+              ></line>
+            </svg>
+          </div>
+          <div class="sidebar-brand-text mx-3">Brilliance</div>
+        </a>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0" />
+
+        <!-- Nav Item - Dashboard -->
+        <li class="nav-item">
+          <a class="nav-link" href="/dashboard">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Dashboard</span></a
+          >
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider" />
+
+        <!-- Heading -->
+        <div class="sidebar-heading">Menu</div>
+
+        <!-- Nav Item - Pages Collapse Menu -->
+        <li class="nav-item">
+          <a
+            class="nav-link collapsed"
+            href="#"
+            data-toggle="collapse"
+            data-target="#collapseTwo"
+            aria-expanded="false"
+            aria-controls="collapseTwo"
+          >
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>Menu</span>
+          </a>
+          <div
+            id="collapseTwo"
+            class="collapse"
+            aria-labelledby="headingTwo"
+            data-parent="#accordionSidebar"
+            style=""
+          >
+            <div class="bg-white py-2 collapse-inner rounded">
+              <h6 class="collapse-header">Menu</h6>
+              <a class="collapse-item" href="/organize">Organizer++</a>
+            </div>
+          </div>
+        </li>
+
+        <!-- Nav Item - Utilities Collapse Menu -->
+
+        <!-- Divider -->
+        <hr class="sidebar-divider" />
+
+        <!-- Heading -->
+        <div class="sidebar-heading">Account</div>
+
+        <!-- Nav Item - Pages Collapse Menu -->
+
+        <!-- Nav Item - Charts -->
+
+        <li class="nav-item">
+          <a
+            class="nav-link collapsed"
+            href="#"
+            data-toggle="collapse"
+            data-target="#collapseUtilities"
+            aria-expanded="false"
+            aria-controls="collapseUtilities"
+          >
+            <i class="fas fa-fw fa-cog"></i>
+            <span>Account Settings</span>
+          </a>
+          <div
+            id="collapseUtilities"
+            class="collapse"
+            aria-labelledby="headingUtilities"
+            data-parent="#accordionSidebar"
+            style=""
+          >
+            <div class="bg-white py-2 collapse-inner rounded">
+              <h6 class="collapse-header">Settings</h6>
+              <a class="collapse-item" href="utilities-color.html"
+                ><i
+                  class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"
+                ></i
+                >Logout</a
+              >
+              <a class="collapse-item" href="utilities-border.html"
+                ><i class="fas fa-trash fa-sm fa-fw mr-2 text-gray-400"></i
+                >Delete Account</a
+              >
+            </div>
+          </div>
+        </li>
+
+        <!-- Nav Item - Tables -->
+
+        <!-- Divider -->
+
+        <!-- Sidebar Toggler (Sidebar) -->
+        <div class="text-center d-none d-md-inline">
+          <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        </div>
+      </ul>
+      <!-- End of Sidebar -->
+
+      <!-- Content Wrapper -->
+      <div id="content-wrapper" class="d-flex flex-column">
+        <!-- Main Content -->
+        <div id="content">
+          <!-- Topbar -->
+          <nav
+            class="
+              navbar navbar-expand navbar-light
+              bg-white
+              topbar
+              mb-4
+              static-top
+              shadow
+            "
+          >
+            <!-- Sidebar Toggle (Topbar) -->
+            <button
+              id="sidebarToggleTop"
+              class="btn btn-link d-md-none rounded-circle mr-3"
+            >
+              <i class="fa fa-bars"></i>
+            </button>
+
+            <!-- Topbar Search -->
+            <form
+              class="
+                d-none d-sm-inline-block
+                form-inline
+                mr-auto
+                ml-md-3
+                my-2 my-md-0
+                mw-100
+                navbar-search
+              "
+            >
+              <div class="input-group">
+                <p
+                  class="
+                    sidebar-brand
+                    d-flex
+                    align-items-center
+                    justify-content-center
+                  "
+                  href="index.html"
+                  style="font-size: 1.5rem; margin-bottom: 0rem"
+                ></p>
+                <div class="sidebar-brand-text mx-3">
+                  Welcome Back {first_name}
+                </div>
+                <p></p>
+              </div>
+            </form>
+
+            <!-- Topbar Navbar -->
+            <ul class="navbar-nav ml-auto">
+              <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+              <li class="nav-item dropdown no-arrow d-sm-none">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="searchDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-search fa-fw"></i>
+                </a>
+                <!-- Dropdown - Messages -->
+                <div
+                  class="
+                    dropdown-menu dropdown-menu-right
+                    p-3
+                    shadow
+                    animated--grow-in
+                  "
+                  aria-labelledby="searchDropdown"
+                >
+                  <form class="form-inline mr-auto w-100 navbar-search">
+                    <div class="input-group">
+                      <input
+                        type="text"
+                        class="form-control bg-light border-0 small"
+                        placeholder="Search for..."
+                        aria-label="Search"
+                        aria-describedby="basic-addon2"
+                      />
+                      <div class="input-group-append">
+                        <button class="btn btn-primary" type="button">
+                          <i class="fas fa-search fa-sm"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </li>
+
+              <!-- Nav Item - Alerts -->
+              <li class="nav-item dropdown no-arrow mx-1">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="alertsDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-bell fa-fw"></i>
+                  <!-- Counter - Alerts -->
+                  <span class="badge badge-danger badge-counter">1</span>
+                </a>
+                <!-- Dropdown - Alerts -->
+                <div
+                  class="
+                    dropdown-list dropdown-menu dropdown-menu-right
+                    shadow
+                    animated--grow-in
+                  "
+                  aria-labelledby="alertsDropdown"
+                >
+                  <h6 class="dropdown-header">Alerts Center</h6>
+
+                  <a class="dropdown-item d-flex align-items-center" href="#">
+                    <div class="mr-3">
+                      <div class="icon-circle bg-success">
+                        <i class="fas fa-donate text-white"></i>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="small text-gray-500">August 19, 2021</div>
+                      Welcome to Brilliance, we are extremely delgihted to have
+                      you with us!
+                    </div>
+                  </a>
+                </div>
+              </li>
+
+              <!-- Nav Item - Messages -->
+              <li class="nav-item dropdown no-arrow mx-1"></li>
+
+              <div class="topbar-divider d-none d-sm-block"></div>
+
+              <!-- Nav Item - User Information -->
+              <li class="nav-item dropdown no-arrow">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="userDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <span class="mr-2 d-none d-lg-inline text-gray-600 small"
+                    >{Username}</span
+                  >
+                  <img
+                    class="img-profile rounded-circle"
+                    src="img/undraw_profile.svg"
+                  />
+                </a>
+                <!-- Dropdown - User Information -->
+                <div
+                  class="
+                    dropdown-menu dropdown-menu-right
+                    shadow
+                    animated--grow-in
+                  "
+                  aria-labelledby="userDropdown"
+                >
+                  <a class="dropdown-item" href="#">
+                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Profile
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Settings
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Activity Log
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    data-toggle="modal"
+                    data-target="#logoutModal"
+                  >
+                    <i
+                      class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"
+                    ></i>
+                    Logout
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <!-- End of Topbar -->
+
+          <!-- Begin Page Content -->
+          <div class="container-fluid">
+            <!-- Page Heading -->
+            <h1 class="h3 mb-4 text-gray-800">Organizer</h1>
+            <div class="card shadow mb-4">
+              <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">
+                  Some suggestions
+                </h6>
+              </div>
+              <div class="card-body">
+                According to the results you provided we suggest you to spend
+                more time studying
+                <span class="text-dark font-weight-bold">{weakest_sub}</span>.
+                This can be easily done by either reducing the time you study
+                <span class="text-dark font-weight-bold">{strong_sub}</span>
+                (which seems to be your strongest subject) or by setting your
+                study goals for each day by the app below.
+              </div>
+            </div>
+            <div class="row">
+              <!-- Earnings (Monthly) Card Example -->
+
+              <!-- Earnings (Monthly) Card Example -->
+
+              <!-- Earnings (Monthly) Card Example -->
+              <div class="col-xl-12 col-md-6 mb-4">
+                <div class="card border-left-info shadow h-100 py-2">
+                  <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                      <div class="col mr-2">
+                        <div
+                          class="
+                            text-xs
+                            font-weight-bold
+                            text-info text-uppercase
+                            mb-1
+                          "
+                        >
+                          Goal Completion rate
+                        </div>
+                        <div class="row no-gutters align-items-center">
+                          <div class="col-auto">
+                            <div
+                              id="progress-text"
+                              class="
+                                h5
+                                mb-0
+                                mr-3
+                                font-weight-bold
+                                text-gray-800
+                              "
+                            >
+                              0%
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="progress progress-sm mr-2">
+                              <div
+                                class="progress-bar bg-info"
+                                role="progressbar"
+                                style="width: 0%"
+                                aria-valuenow="50"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                              ></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-auto">
+                        <i
+                          class="fas fa-clipboard-list fa-2x text-gray-300"
+                        ></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pending Requests Card Example -->
+            </div>
+            <div class="card shadow mb-4">
+              <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">
+                  Add a new Goal
+                </h6>
+              </div>
+              <div class="card-body">
+                <div
+                  class="input-group mw-70"
+                  style="
+                    display: grid;
+                    max-width: 60%;
+                    padding: 0.25rem;
+                    align-items: center;
+                    grid-template-rows: repeat(2, 1fr);
+                  "
+                >
+                  <input
+                    type="text"
+                    id="add-goal"
+                    class="form-control bg-light border-0 small"
+                    placeholder="I have to study maths for 1 hour"
+                    aria-label="Search"
+                    maxlength="40"
+                    aria-describedby="basic-addon2"
+                    style="
+                      min-width: 100%;
+                      background-color: #eaeaea !important;
+                      border-radius: 6px;
+                    "
+                  />
+
+                  <div class="input-group">
+                    <button
+                      id="add-goal-btn"
+                      class="btn btn-primary"
+                      type="button"
+                      style="margin-top: 0.25rem"
+                    >
+                      Add Goal
+                    </button>
+                  </div>
+                  <div
+                    class="input-group"
+                    style="margin-top: 1rem; display: none"
+                    id="todo-err-box"
+                  >
+                    <span
+                      class="input-group-text bg-info text-gray-100"
+                      id="todo-err-text"
+                    >
+                      Due to scalability issues a user may only have upto 5
+                      goals per day.</span
+                    >
+                  </div>
+                  <span
+                    style="margin-top: 1rem"
+                    class="text-gray-600 font-weight-bold"
+                    ><span
+                      style="margin-top: 1rem"
+                      class="text-dark font-weight-bold"
+                      >Note:
+                    </span>
+                    Your completion rate , pending goals and completed goals
+                    will be stored for your future use till the next day.</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <!-- First Column -->
+              <div class="col-lg-6 mb-4">
+                <!-- Custom Text Color Utilities -->
+                <div class="card shadow mb-4">
+                  <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">
+                      Today's Goals
+                    </h6>
+                  </div>
+                  <div id="goal-container" class="card-body">
+                    You have not added any goal till now
+                    <!-- <div class="input-group mb-3" style="display: grid;grid-template-columns: 6fr 1fr;">
+                      <span class="input-group-text" id="basic-addon1" style="
+                      user-select: none;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+">Study maths for 1 hour and play games</span>
+                      <button id="btn-goal-done" class="btn btn-outline-secondary" style="
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+">Done!</button>
+                    </div>-->
+                  </div>
+                </div>
+
+                <!-- Custom Font Size Utilities -->
+              </div>
+
+              <!-- Second Column -->
+
+              <!-- Third Column -->
+              <div class="col-lg-6 mb-4">
+                <!-- Grayscale Utilities -->
+                <div class="card shadow mb-4">
+                  <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">
+                      Completed Goals
+                    </h6>
+                  </div>
+                  <div id="complete-container" class="card-body">
+                    You have not completed any of your set goals today.
+                    <!-- <div class="input-group mb-3" style="display: grid; text-decoration: line-through">
+                      <span class="input-group-text" id="basic-addon1">Study Maths for 1 hour</span>
+                    </div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /.container-fluid -->
+        </div>
+        <!-- End of Main Content -->
+
+        <!-- Footer -->
+        <footer class="sticky-footer bg-white">
+          <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+              <span>Copyright © Brilliance 2021</span>
+            </div>
+          </div>
+        </footer>
+        <!-- End of Footer -->
+      </div>
+      <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top" style="display: none">
+      <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div
+      class="modal fade"
+      id="logoutModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <button
+              class="close"
+              type="button"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Select "Logout" below if you are ready to end your current session.
+          </div>
+          <div class="modal-footer">
+            <button
+              class="btn btn-secondary"
+              type="button"
+              data-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <a class="btn btn-primary" href="login.html">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+      let addBtn = document.querySelector("#add-goal-btn");
+      let addText = document.querySelector("#add-goal");
+      let goalCon = document.querySelector("#goal-container");
+      let completeCon = document.querySelector("#complete-container");
+      let p_text = document.querySelector("#progress-text");
+      let progressbar = document.querySelector(".progress-bar");
+      let info_box = document.getElementById("todo-err-box");
+      let temp = `<div class="input-group mb-3" style="display: grid; text-decoration: line-through">
+      <span class="input-group-text" id="basic-addon1">{GOAL}</span>
+      </div>`;
+      let todo_temp = `<div class="input-group mb-3" style="display: grid;grid-template-columns: 6fr 1fr;">
+              <span class="input-group-text" id="basic-addon1" style="
+              user-select: none;
+              border-bottom-right-radius: 0;
+              border-top-right-radius: 0;">{GOAL}</span>
+              <button id="{UNIQUE}" class="btn btn-goal-done  btn-outline-secondary" style="border-bottom-left-radius: 0;border-top-left-radius: 0;" >Done!</button>
+              </div>`;
+      let count = 0;
+      let completion_percent;
+      let alt_localName = "dataLocal2";
+      /////////////////////////////////////////////////////
+      // LOCAL STORAGE
+
+      function checkGetAndRenderLocal() {
+        let localData = JSON.parse(localStorage.getItem("dataLocal"));
+        let now = new Date();
+        if (!localData || now.getTime() > localData.expire) {
+          localStorage.removeItem("dataLocal");
+          return;
+        }
+
+        count = localData.count;
+        let btn_ids = [];
+        let comgoals_html = localData.compGoals
+          .map((goal_text) => {
+            let goal_HTML = temp.repeat(1).replace(/{GOAL}/g, goal_text);
+            return goal_HTML;
+          })
+          .join("");
+        let pendingGoals_html = localData.pendingGoals
+          .map((goal_text) => {
+            let unique = Math.trunc(Math.random() * 100) + 100 + "ET";
+            let goal_HTML = todo_temp
+              .repeat(1)
+              .replace(/{GOAL}/g, goal_text)
+              .replace(/{UNIQUE}/g, unique);
+            btn_ids.push(unique);
+            return goal_HTML;
+          })
+          .join("");
+        completeCon.innerHTML = comgoals_html;
+        goalCon.innerHTML = pendingGoals_html;
+        if (localData.pendingGoals.length == 0) {
+          goalCon.textContent = "Hooray! you have completed all of your goals!";
+        }
+        btn_ids.forEach((id) => {
+          let btn =
+            document.getElementById(id).previousElementSibling
+              .nextElementSibling;
+          console.log(id, btn);
+          btn.addEventListener("click", (e) => {
+            console.log("hello");
+            todoclick(e);
+          });
+        });
+        progressbar.style.width = localData.compRate;
+        p_text.textContent = localData.compRate;
+      }
+      function updateLocal() {
+        let localData = JSON.parse(localStorage.getItem("dataLocal"));
+        let comp_goals = Array.from(completeCon.children).map(
+          (goalContainer) => Array.from(goalContainer.children)[0].textContent
+        );
+        let toBeDone_goals = Array.from(goalCon.children).map(
+          (goalContainer) => Array.from(goalContainer.children)[0].textContent
+        );
+        if (comp_goals.length == 0 && toBeDone_goals.length == 0) return 1;
+        let now = new Date();
+        let expiry = new Date(now.setDate(now.getDate() + 1));
+        let data = JSON.stringify({
+          pendingGoals: toBeDone_goals,
+          compGoals: comp_goals,
+          expire: expiry.getTime(),
+          count,
+          compRate: completion_percent,
+        });
+        localStorage.setItem("dataLocal", data);
+      }
+      let todoclick = (e) => {
+        let goalText = e.target.previousElementSibling.textContent;
+        if (completeCon.textContent.includes("any of your set goals today."))
+          completeCon.textContent = "";
+
+        let html = temp.repeat(1).replace("{GOAL}", goalText);
+        completeCon.insertAdjacentHTML("afterbegin", html);
+        e.target.parentNode.remove();
+        completion_percent =
+          Math.trunc(
+            (Array.from(completeCon.children).length /
+              (Array.from(goalCon.children).length +
+                Array.from(completeCon.children).length)) *
+              100
+          ) + "%";
+        progressbar.style.width = completion_percent;
+        p_text.textContent = completion_percent;
+        updateLocal();
+        if (!goalCon.innerHTML || !goalCon.textContent)
+          goalCon.textContent = "Hooray! you have completed all of your goals!";
+      };
+
+      ///////////////////////////////////////////////////
+      // TODO MAIN FUNCTIONALITY
+
+      addBtn.addEventListener("click", () => {
+        let goal = addText.value;
+        if (!goal) return;
+        addText.value = "";
+        addBtn.blur();
+        if (
+          goalCon.textContent.includes("added any goal till now") ||
+          goalCon.textContent.includes("Hooray! you have")
+        )
+          goalCon.textContent = "";
+
+        if (count >= 5) {
+          info_box.style.display = "flex";
+          return;
+        }
+        let unique = Math.trunc(Math.random() * 100) + 100 + "ET";
+        goalCon.insertAdjacentHTML(
+          "afterbegin",
+          `<div class="input-group mb-3" style="display: grid;grid-template-columns: 6fr 1fr;">
+                <span class="input-group-text" id="basic-addon1" style="
+                user-select: none;
+                border-bottom-right-radius: 0;
+                border-top-right-radius: 0;">${goal}</span>
+                <button id="${unique}" class="btn btn-goal-done  btn-outline-secondary" style="border-bottom-left-radius: 0;border-top-left-radius: 0;">Done!</button>
+                </div>`
+        );
+        completion_percent =
+          Math.trunc(
+            (Array.from(completeCon.children).length /
+              (Array.from(goalCon.children).length +
+                Array.from(completeCon.children).length)) *
+              100
+          ) + "%";
+        progressbar.style.width = completion_percent;
+        p_text.textContent = completion_percent;
+        count++;
+        updateLocal();
+        document.getElementById(unique).addEventListener("click", todoclick);
+      });
+      checkGetAndRenderLocal();
+    </script>
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+  </body>
+</html>

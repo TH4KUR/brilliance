@@ -34,7 +34,14 @@ const token_validate = async (req) => {
   let user = await User.findOne({
     $and: [{ username: { $eq: u } }, { password: { $eq: p } }],
   });
-  console.log(user);
+  if (user.firstLogin) {
+    await User.findOneAndUpdate(
+      {
+        $and: [{ username: { $eq: u } }, { password: { $eq: p } }],
+      },
+      { firstLogin: false }
+    );
+  }
   return user ? { user, check: true } : { check: false };
 };
 const token_checker = async (req, res) => {
@@ -144,6 +151,8 @@ const organize_temp = fs.readFileSync(
   `${__dirname}/Main page/blank.html`,
   "utf-8"
 );
+const intro_temp = fs.readFileSync(`${__dirname}/Main page/intro.txt`, "utf-8");
+const intro_js = fs.readFileSync(`${__dirname}/Main page/introjs.txt`, "utf-8");
 const templateUser = async (temp, user, dashboard = false) => {
   let output = temp.repeat(1);
   if (!dashboard) {
@@ -160,8 +169,6 @@ const templateUser = async (temp, user, dashboard = false) => {
     });
     let w_sub = dic[sub_arr[min_marks][0]];
     let s_sub = dic[sub_arr[max_marks][0]];
-    console.log("MIN", w_sub);
-    console.log("MAX", s_sub);
     output = output.replace(
       /{weakest_sub}/g,
       w_sub
@@ -174,6 +181,21 @@ const templateUser = async (temp, user, dashboard = false) => {
         ? s_sub
         : "This data will be updated once you update you subject report"
     );
+  }
+  if (user.firstLogin) {
+    output = output.replace(/<!-- {INTRO} -->/g, intro_temp);
+    output = output.replace(
+      /<!-- {STYLE} -->/g,
+      `class="modal-open" style="padding-right: 17px;"`
+    );
+    output = output.replace(
+      /<!-- {modal_bg} -->/g,
+      `<div id="modal-bg-remove" class="modal-backdrop fade show"></div>`
+    );
+    output = output.replace(/{introjs}/g, intro_js);
+  } else {
+    output = output.replace(/{introjs}/g, "");
+    output = output.replace(/<!-- {STYLE} -->/g, "");
   }
   output = output.replace(/{eng_report}/g, user.sub_report.eng);
   output = output.replace(/{hin_report}/g, user.sub_report.hin);
@@ -296,11 +318,9 @@ app
         let ret_obj = await token_validate(req, res);
         let check = ret_obj.check;
         let user = ret_obj?.user;
-        console.log(check);
+
         if (!check) {
-          res
-            .setHeader("Cache-Control", "no-cache, no-store, must-revalidate")
-            .redirect("/login");
+          res.redirect("/login");
           return;
         }
         let html = await templateUser(dashboard_temp.repeat(1), user, true);
@@ -501,7 +521,7 @@ app
       let body = req.body;
       let name = body.name.split(" ");
       body.first_name = name[0];
-      body.last_name = name[1];
+      body.last_name = name[1] || "";
 
       let userdata = new User(req.body);
       await userdata.save();

@@ -45,6 +45,11 @@
         grid-template-columns: repeat(2, 1fr);
         grid-row-gap: 7px;
       }
+      .mySlides{
+        font-size: 1.25rem;
+        justify-content: center;
+        flex-direction: column;
+      }
     </style>
     <style type="text/css">
       /* Chart.js */
@@ -90,7 +95,9 @@
     </style>
   </head>
 
-  <body id="page-top">
+  <body id="page-top" 
+  <!-- {STYLE} -->
+  >
     <!-- Page Wrapper -->
     <div id="wrapper">
       <!-- Sidebar -->
@@ -498,15 +505,7 @@
     <p style="
     margin-bottom: 0;
 ">
-  <a class="btn btn-secondary" onclick="function(){
-    document.getElementById('collapseExample-et').classList.remove('hidden');
-    
-    }" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" style="
-    width: 100%;
-    text-align: left;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-">English</a>
+  <a class="btn btn-secondary">English</a>
   
 </p>
 <div class="show" id="collapseExample-et" style="
@@ -850,7 +849,7 @@
     <!-- End of Page Wrapper -->
 
     <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top" style="display: none">
+    <a class="scroll-to-top rounded" href="#page-top" style="display: flex;justify-content: center;align-items: center;">
       <i class="fas fa-angle-up"></i>
     </a>
 
@@ -935,7 +934,7 @@
               id="success-friend"
               class="text-gray-100 hidden"
             >
-              Your friend was added! Refreshing.... in 5 secs
+              Your friend was added! Refreshing.... in 3 secs
             </p>
             <p
               style="
@@ -963,6 +962,11 @@
         </div>
       </div>
     </div>
+
+
+    <!-- -------------------------------------------INTRO--------------------------------------------- -->
+      <!-- {INTRO} -->
+        <!-- ------------------------------------------------ -->
     <div
       class="modal fade"
       id="report-modal"
@@ -1112,6 +1116,12 @@
 
     <!-- Page level custom scripts -->
     <script>
+      ///////////////////////////////////////////////////////////
+      /// Slideshow div
+      {introjs}
+/////////////////////////////////////////////////////
+// Chart.js
+
       // Set new default font family and font color to mimic Bootstrap's default styling
       (Chart.defaults.global.defaultFontFamily = "Nunito"),
         '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
@@ -1243,6 +1253,6 @@
       });
     </script>
     <script src="js/demo/chart-pie-demo.js"></script>
-    <!-- <div class="modal-backdrop fade show"></div> -->
+    <!-- {modal_bg} -->
   </body>
 </html>

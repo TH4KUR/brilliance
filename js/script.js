@@ -89,9 +89,9 @@ friend_btn_add.addEventListener("click", async (e) => {
     }
     err_friend.classList.add("hidden");
     success_friend.classList.remove("hidden");
-    // setTimeout(() => {
-    //   location.reload();
-    // }, 1500);
+    setTimeout(() => {
+      location.reload();
+    }, 3000);
   } catch (err) {
     console.log(err);
     err_friend.textContent = err;

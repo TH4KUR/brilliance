@@ -1,0 +1,73 @@
+    <div class="modal fade show" id="introModal" tabindex="-1" style="display: block;padding-right: 19px;" aria-modal="true" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content" style="
+    width: 133%;
+">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Introduction</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+    <h2 class="m-0 font-weight-bold text-primary" style="
+    margin-bottom: 1rem !important;
+    font-size: 1.25rem;
+">Welcome to Brilliance! <span style="font-size: 1.1rem">Where you are your own manager</span></h2>
+
+
+    <div class="w3-content w3-display-container">
+      <div class="mySlides first_slide" style="display: block;">This is an introductory slide which will tell you how to get started with brilliance app to get the best out of it! <br> Note: The gifs might take some time to load, since i could only find that free hosting service. (Please bear with us!)</div>
+      <div class="mySlides" style="display: none;">
+        Edit your subject report each month as you give your school exams which will automatically generate a overall report so you can keep a track of them!
+      <img height="500" src="https://s9.gifyu.com/images/slide_1.gif" width="600">
+    </div>
+    
+    <div class="mySlides" style="display: none;">
+      Set your goals for each day and see if you can complete your own goals through the completion rate.
+      <img height="500" src="https://s9.gifyu.com/images/slide_2.gif" width="600">
+    </div>
+    
+    <div class="mySlides" style="display: none;">
+      Invite your friends to brilliance to compete and learn from them how they study!
+      <img height="500" src="https://s9.gifyu.com/images/slide_3.gif" width="600">
+
+      </div>
+
+      <div class="mySlides last_slide" style="display: none;">
+        Yay! it was that simple now, have a great journey ahead!
+      <video src="https://media.tenor.com/videos/5bf457c6522acae4c98196eddef18f75/mp4" height="500" width="600" loop autoplay>
+      Your browser unfortunately does not support video. 
+      </video>
+      </div>
+
+
+    <div class="btn-container-slideshow" style="
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem 8rem;
+    ">  
+    <button id="btn_slide_left" style="    background-color: transparent;
+border: 1px solid #333;
+border-radius: 50%;
+width: 28px;
+" onclick="plusDivs(-1)">❮</button>
+    <button id="btn_slide_right" style="    background-color: transparent;
+border: 1px solid #333;
+border-radius: 50%;
+width: 28px;
+" onclick="plusDivs(1)">❯</button>
+</div>
+    </div>
+    <div class="modal-footer" style="
+    padding: 0;
+    padding-top: .75rem;
+">
+  <button class="btn btn-primary hidden" id="close_intro">I am ready to go!</button>
+</div></div>
+
+</div>
+</div>
+  
+        </div>
+
